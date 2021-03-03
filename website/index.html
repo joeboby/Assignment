@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html>
+    <!--Remove some html errors-->
+    <head>
+        <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+        <meta content="utf-8" http-equiv="encoding">
+    </head>
+
+    <body>
+        
+        <div id="searchBox" class="SearchBox">
+            <h1>Assignment 1</h1>
+            <p>Please enter the tag you would like to query:</p>
+            <form action="javascript:preformQuery()" method="GET" id="queryForm">
+                <div class="search">
+                    <input type="text" name="tagged">
+                </div>
+                    <input class="submitButton" type="submit" name="IGNORE" value="Submit">
+            </form>
+
+            <p>Results:</p>
+            <!--This is the div where the results will show up-->
+            <div class="Results" id="Results">
+
+            </div>
+        </div>
+        
+        
+    </body>
+
+    <!--Load the script-->
+    <script src="js/server.js"></script>
+
+</html>
+
+<!--CSS styling/animations-->
+
+<style type="text/css">
+
+    .SearchBox {
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        width: 1600px;
+        padding: 40px;
+        transform: translate(-50%, -0%);
+        background: rgba(0,0,0,.5);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0,0,0,.6);
+        border-radius: 10px;
+    }
+
+    .SearchBox h1 {
+        margin: 0 0 30px;
+        padding: 0;
+        color: #fff;
+        text-align: center;
+    }
+
+    .SearchBox .search {
+        position: relative;
+    }
+
+    
+    .SearchBox .search input {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+        color: #fff;
+        margin-bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #fff;
+        outline: none;
+        background: transparent;
+    }
+
+    .SearchBox form .submitButton {
+        position: relative;
+        display: inline-block;
+        padding: 10px 20px;
+        color: #03e9f4;
+        font-size: 20px;
+        left: 45%;
+        text-decoration: none;
+        text-transform: uppercase;
+        overflow: hidden;
+        transition: .5s;
+        margin-top: 40px;
+        letter-spacing: 5px
+    }
+
+    .SearchBox .submitButton:hover {
+        background: #03e9f4;
+        color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px #03e9f4,
+                    0 0 25px #03e9f4,
+                    0 0 50px #03e9f4,
+                    0 0 100px #03e9f4;
+    }  
+
+    .timeDiv {
+        position: absolute;
+        bottom: -20px;
+    }  
+
+    .collapsible a {
+        border: 1px solid #ddd;
+        margin-top: -1px; 
+        background-color: #f6f6f6; 
+        padding: 12px; 
+        text-decoration: none; 
+        font-size: 18px;
+        color: black; 
+        display: block;
+    }
+
+    .collapsible a:hover:not(.header) {
+        background-color: #eee;
+    }
+
+    .collapsible {
+        background-color: #777;
+        color: white;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+    }
+
+    .active, .collapsible:hover {
+        background-color: #555;
+    }
+
+    .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #f1f1f1;
+    }
+</style>
+
+
+        
